@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F4F9; color: #231A2E; font-family: "Jost", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #6B3FA0; text-decoration: none; }
+  a:hover { color: #231A2E; }
+  ::selection { background: #6B3FA0; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,48px);background:rgba(247,244,249,0.88);backdrop-filter:blur(14px);borderBottom:1px solid rgba(35,26,46,0.12)">
+    <a href="#topo" style="display:flex;flex-direction:column;line-height:1;gap:4px;color:#231A2E">
+      <span style="font-weight:500;font-size:21px;letter-spacing:0.02em">Essência Inteira</span>
+      <span style="font-size:9px;letter-spacing:0.34em;text-transform:uppercase;color:#5A4F6B">Campanha de prevenção</span>
+    </a>
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(12px,2vw,26px);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#574B63">
+      <a href="#sinais" style="color:#574B63" style-hover="color:#231A2E">Sinais</a>
+      <a href="#ciclo" style="color:#574B63" style-hover="color:#231A2E">Ciclo</a>
+      <a href="Depoimento.dc.html" style="color:#574B63" style-hover="color:#231A2E">Depoimento</a>
+      <a href="Formulario.dc.html" style="color:#574B63" style-hover="color:#231A2E">Formulário</a>
+      <a href="#ajudar" style="color:#574B63" style-hover="color:#231A2E">Como ajudar</a>
+      <a href="#ajuda" style="color:#574B63" style-hover="color:#231A2E">Buscar ajuda</a>
+      <a href="#campanha" style="color:#574B63" style-hover="color:#231A2E">Campanha</a>
+      <sc-if value="{{ quickExit }}" hint-placeholder-val="{{ true }}">
+        <button type="button" onClick="{{ sair }}" style="display:flex;align-items:center;gap:8px;border:1px solid rgba(35,26,46,0.24);background:transparent;color:#231A2E;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .2s" style-hover="background:#FFFFFF;color:#231A2E;border-color:#231A2E">
+          <span style="display:block;width:6px;height:6px;border-radius:50%;background:#6B3FA0"></span>Sair rápido
+        </button>
+      </sc-if>
+    </nav>
+  </header>
+
+  <section id="topo" data-screen-label="Abertura" style="background:#F7F4F9">
+    <img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17.jpeg" alt="Peça da campanha: sobreviver também é uma forma de força. A sua história pode inspirar outras mulheres. Você não está sozinha." style="width:100%;height:auto;display:block" />
+    <div style="display:grid;gap:clamp(22px,3vw,34px);max-width:1180px;margin:0 auto;width:100%;padding:clamp(44px,7vw,92px) clamp(20px,5vw,72px)">
+      <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Campanha de prevenção · Lei Maria da Penha</span>
+      <h1 style="margin:0;font-weight:500;font-size:clamp(32px,4.6vw,54px);line-height:1.12;letter-spacing:-0.025em;max-width:24ch;text-wrap:pretty">Reconhecer, informar e acolher. Uma campanha sobre sair do silêncio.</h1>
+      <div style="display:grid;gap:18px;max-width:58ch">
+        <span style="display:block;width:64px;height:1px;background:rgba(35,26,46,0.28)"></span>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63">Aqui você encontra os sinais de uma relação violenta, o ciclo que faz tudo se repetir, o que fazer para ajudar alguém e onde buscar apoio gratuito.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px">
+        <a href="https://www.psymeetsocial.com/busca" target="_blank" rel="noopener" style="padding:15px 30px;background:#6B3FA0;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px;transition:all .2s" style-hover="background:#231A2E;color:#FFFFFF">Preciso de ajuda agora</a>
+        <a href="Podcasts.dc.html" style="padding:15px 30px;border:1px solid rgba(35,26,46,0.28);color:#231A2E;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px;transition:all .2s" style-hover="border-color:#231A2E;background:rgba(107,63,160,0.08)">Reconhecer os sinais</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-wrap:wrap;gap:1px;background:rgba(255,255,255,0.14)">
+    <div style="flex:1 1 240px;min-width:0;background:#241A2E;padding:clamp(22px,3vw,34px) clamp(20px,4vw,44px);display:grid;gap:6px">
+      <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#B3A6C2">Central de Atendimento à Mulher</span>
+      <strong style="font-weight:500;font-size:clamp(32px,4vw,46px);line-height:1;color:#F6F2FA">Ligue 180</strong>
+      <span style="font-size:13px;color:#CFC5DB">Gratuito, sigiloso, 24 horas, de todo o Brasil.</span>
+    </div>
+    <div style="flex:1 1 240px;min-width:0;background:#241A2E;padding:clamp(22px,3vw,34px) clamp(20px,4vw,44px);display:grid;gap:6px">
+      <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#B3A6C2">Emergência / Polícia Militar</span>
+      <strong style="font-weight:500;font-size:clamp(32px,4vw,46px);line-height:1;color:#F6F2FA">Ligue 190</strong>
+      <span style="font-size:13px;color:#CFC5DB">Risco imediato de agressão. Peça socorro.</span>
+    </div>
+    <div style="flex:1 1 240px;min-width:0;background:#241A2E;padding:clamp(22px,3vw,34px) clamp(20px,4vw,44px);display:grid;gap:6px">
+      <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#B3A6C2">Direitos humanos</span>
+      <strong style="font-weight:500;font-size:clamp(32px,4vw,46px);line-height:1;color:#F6F2FA">Disque 100</strong>
+      <span style="font-size:13px;color:#CFC5DB">Denúncias envolvendo crianças, idosos e outros casos.</span>
+    </div>
+  </section>
+
+  <section style="padding:clamp(64px,9vw,130px) clamp(20px,5vw,72px);background:#FFFFFF;color:#231A2E">
+    <div style="max-width:1180px;margin:0 auto;display:grid;gap:clamp(40px,6vw,72px);grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:center">
+      <div style="display:grid;gap:22px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">O que parecia amor</span>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em;letter-spacing:-0.01em;max-width:20ch;text-wrap:pretty">O que parecia amor, também machucava.</h2>
+        <span style="display:block;width:56px;height:1px;background:rgba(25,18,32,0.3)"></span>
+        <p style="margin:0;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;line-height:2.1;color:#574B63;max-width:44ch">Violência pode estar em atitudes que muitas vezes passam despercebidas.</p>
+        <p style="margin:0;font-weight:500;font-size:clamp(19px,2.2vw,24px);line-height:1.55;color:#231A2E;max-width:46ch;text-wrap:pretty">A violência raramente começa por um soco. Começa por um comentário, um controle de horário, uma mensagem checada, um isolamento aos poucos. Nomear o que acontece é o primeiro passo para interromper o que vem depois.</p>
+      </div>
+      <img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (1).jpeg" alt="Peça da campanha: o que parecia amor, também machucava" style="width:100%;height:auto;display:block;border-radius:2px;box-shadow:0 30px 70px -40px rgba(25,18,32,0.7)" />
+    </div>
+  </section>
+
+  <section id="sinais" data-screen-label="Sinais" style="padding:clamp(64px,9vw,130px) clamp(20px,5vw,72px);background:#F7F4F9">
+    <div style="max-width:1180px;margin:0 auto;display:grid;gap:clamp(36px,5vw,60px)">
+      <div style="display:grid;gap:20px;max-width:760px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Reconheça os sinais</span>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em;text-wrap:pretty">Ciúme excessivo, controle e manipulação também são violência.</h2>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63;max-width:60ch">A Lei Maria da Penha (Lei nº 11.340/2006) reconhece cinco formas de violência doméstica e familiar contra a mulher. Nenhuma delas precisa deixar marca visível para existir.</p>
+      </div>
+      <div style="display:grid;gap:1px;background:rgba(35,26,46,0.12);grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))">
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,38px);display:grid;gap:14px;align-content:start;transition:background .25s" style-hover="background:#F3EEF8">
+          <span style="font-weight:500;font-size:14px;letter-spacing:0.3em;color:#6B3FA0">01</span>
+          <h3 style="margin:0;font-weight:500;font-size:26px">Física</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Qualquer conduta que ofenda a integridade ou a saúde do corpo: empurrões, apertos, chutes, queimaduras, impedir a saída de um ambiente.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,38px);display:grid;gap:14px;align-content:start;transition:background .25s" style-hover="background:#F3EEF8">
+          <span style="font-weight:500;font-size:14px;letter-spacing:0.3em;color:#6B3FA0">02</span>
+          <h3 style="margin:0;font-weight:500;font-size:26px">Psicológica</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Humilhação, chantagem, vigilância constante, ameaças, ridicularização, isolamento da família e das amigas, distorção do que ela viu e sentiu.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,38px);display:grid;gap:14px;align-content:start;transition:background .25s" style-hover="background:#F3EEF8">
+          <span style="font-weight:500;font-size:14px;letter-spacing:0.3em;color:#6B3FA0">03</span>
+          <h3 style="margin:0;font-weight:500;font-size:26px">Sexual</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Forçar ou constranger a participar de relação sexual não desejada, impedir o uso de contraceptivos, forçar gravidez, aborto ou prostituição.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,38px);display:grid;gap:14px;align-content:start;transition:background .25s" style-hover="background:#F3EEF8">
+          <span style="font-weight:500;font-size:14px;letter-spacing:0.3em;color:#6B3FA0">04</span>
+          <h3 style="margin:0;font-weight:500;font-size:26px">Patrimonial</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Retenção ou destruição de documentos, objetos e bens, controle do salário, dívidas feitas no nome dela, impedimento de trabalhar.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,38px);display:grid;gap:14px;align-content:start;transition:background .25s" style-hover="background:#F3EEF8">
+          <span style="font-weight:500;font-size:14px;letter-spacing:0.3em;color:#6B3FA0">05</span>
+          <h3 style="margin:0;font-weight:500;font-size:26px">Moral</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Calúnia, difamação e injúria: acusações falsas, exposição da intimidade, ofensas diante de outras pessoas ou nas redes sociais.</p>
+        </div>
+        <div style="background:#6B3FA0;color:#FFFFFF;padding:clamp(26px,3vw,38px);display:grid;gap:14px;align-content:center">
+          <p style="margin:0;font-weight:500;font-size:clamp(24px,2.6vw,30px);line-height:1.25;text-wrap:pretty">Se você reconheceu alguma dessas situações, não é exagero seu.</p>
+          <a href="Podcasts.dc.html" style="justify-self:start;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.5);padding-bottom:4px">Ouvir os podcasts</a>
+          <a href="#ajuda" style="justify-self:start;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.5);padding-bottom:4px">Ver onde buscar ajuda</a>
+        </div>
+      </div>
+      <div style="display:grid;gap:clamp(28px,4vw,48px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:center;padding-top:clamp(20px,3vw,32px)">
+        <img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (2).jpeg" alt="Peça da campanha: não é normal" style="width:100%;height:auto;display:block;border-radius:2px" />
+        <div style="display:grid;gap:18px">
+          <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#5A4F6B">Não é normal</span>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;gap:14px">
+            <li style="display:flex;gap:14px;font-size:16px;line-height:1.7;color:#332843"><span style="color:#6B3FA0">—</span>Exigir senhas, localização e acesso ao seu celular.</li>
+            <li style="display:flex;gap:14px;font-size:16px;line-height:1.7;color:#332843"><span style="color:#6B3FA0">—</span>Decidir com quem você fala, o que veste e para onde vai.</li>
+            <li style="display:flex;gap:14px;font-size:16px;line-height:1.7;color:#332843"><span style="color:#6B3FA0">—</span>Dizer que ninguém mais vai te querer, ou que a culpa é sua.</li>
+            <li style="display:flex;gap:14px;font-size:16px;line-height:1.7;color:#332843"><span style="color:#6B3FA0">—</span>Ameaçar se separar, se machucar ou expor suas fotos para te controlar.</li>
+            <li style="display:flex;gap:14px;font-size:16px;line-height:1.7;color:#332843"><span style="color:#6B3FA0">—</span>Pedir desculpas depois e repetir tudo na semana seguinte.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ciclo" data-screen-label="Ciclo da violência" style="padding:clamp(64px,9vw,130px) clamp(20px,5vw,72px);background:#EDE6F2">
+    <div style="max-width:1180px;margin:0 auto;display:grid;gap:clamp(36px,5vw,56px)">
+      <div style="display:grid;gap:18px;max-width:700px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">O ciclo da violência</span>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em">Por que é tão difícil sair</h2>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63">A violência doméstica costuma se repetir em três fases que se alternam. É esse movimento — e não a falta de força — que prende uma mulher em uma relação abusiva.</p>
+      </div>
+      <div style="display:grid;gap:clamp(16px,2vw,24px);grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+        <div style="border:1px solid rgba(35,26,46,0.16);padding:clamp(26px,3vw,36px);display:grid;gap:16px;align-content:start">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#5A4F6B">Fase 1</span>
+          <h3 style="margin:0;font-weight:500;font-size:28px">Tensão</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Irritação, silêncio pesado, acusações e ameaças. Ela passa a andar em volta dele com cuidado, tentando evitar a explosão.</p>
+        </div>
+        <div style="border:1px solid rgba(35,26,46,0.16);padding:clamp(26px,3vw,36px);display:grid;gap:16px;align-content:start">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#5A4F6B">Fase 2</span>
+          <h3 style="margin:0;font-weight:500;font-size:28px">Agressão</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">A tensão se rompe em violência física, sexual, verbal ou psicológica. É o momento de maior risco e também quando o pedido de ajuda é mais urgente.</p>
+        </div>
+        <div style="border:1px solid rgba(35,26,46,0.16);padding:clamp(26px,3vw,36px);display:grid;gap:16px;align-content:start">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#5A4F6B">Fase 3</span>
+          <h3 style="margin:0;font-weight:500;font-size:28px">Reconciliação</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Arrependimento, promessas, presentes, culpa transferida para ela. A relação parece melhorar — até a tensão começar outra vez.</p>
+        </div>
+      </div>
+      <div style="display:grid;gap:clamp(28px,4vw,48px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:center">
+        <div style="display:grid;gap:18px">
+          <h3 style="margin:0;font-weight:500;font-size:clamp(26px,3.2vw,38px);line-height:1.15;text-wrap:pretty">A violência também quebra a forma como você se vê.</h3>
+          <span style="display:block;width:56px;height:1px;background:rgba(35,26,46,0.25)"></span>
+          <p style="margin:0;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;line-height:2.1;color:#574B63">Mas a sua essência continua inteira.</p>
+        </div>
+        <img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (4).jpeg" alt="Peça da campanha: a violência também quebra a forma como você se vê" style="width:100%;height:auto;display:block;border-radius:2px" />
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Vídeo" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,72px);background:#F7F4F9">
+    <div style="max-width:980px;margin:0 auto;display:grid;gap:clamp(24px,3vw,36px)">
+      <div style="display:grid;gap:14px;justify-items:center;text-align:center">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Vídeo da campanha</span>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4.2vw,50px);line-height:1.1;max-width:22ch">Dois minutos para olhar com outros olhos</h2>
+      </div>
+      <video src="uploads/WhatsApp Video 2026-09-16 at 15.14.10.mp4" controls="" playsInline="" preload="metadata" style="width:100%;max-height:70vh;display:block;background:#000;border-radius:2px;box-shadow:0 40px 90px -50px rgba(0,0,0,0.9)"></video>
+      <p style="margin:0;text-align:center;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:#5A4F6B">Compartilhe. Informação também protege.</p>
+    </div>
+  </section>
+
+
+
+  <section id="ajudar" data-screen-label="Como ajudar" style="padding:clamp(64px,9vw,130px) clamp(20px,5vw,72px);background:#FFFFFF;color:#231A2E">
+    <div style="max-width:1180px;margin:0 auto;display:grid;gap:clamp(36px,5vw,56px)">
+      <div style="display:grid;gap:18px;max-width:700px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Como ajudar alguém</span>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em">Se você desconfia, não espere ter certeza</h2>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63">A maioria das mulheres pede ajuda primeiro a uma amiga, uma irmã, uma colega de sala. O que você faz nessa conversa importa.</p>
+      </div>
+      <div style="display:grid;gap:clamp(20px,3vw,40px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+        <div style="display:grid;gap:18px;align-content:start;background:#F3EEF8;padding:clamp(26px,3vw,38px);border-radius:2px">
+          <h3 style="margin:0;font-weight:500;font-size:26px;color:#3C6B4F">Faça</h3>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;gap:13px">
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#3C6B4F">+</span>Ouça sem julgar e acredite no que ela conta.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#3C6B4F">+</span>Diga com clareza: a culpa não é dela.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#3C6B4F">+</span>Ofereça informação concreta: 180, 190, Delegacia da Mulher.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#3C6B4F">+</span>Combine um código ou palavra de emergência entre vocês.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#3C6B4F">+</span>Continue por perto, mesmo que ela ainda não consiga sair.</li>
+          </ul>
+        </div>
+        <div style="display:grid;gap:18px;align-content:start;background:#F3EEF8;padding:clamp(26px,3vw,38px);border-radius:2px">
+          <h3 style="margin:0;font-weight:500;font-size:26px;color:#A33B2B">Evite</h3>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;gap:13px">
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#A33B2B">—</span>Perguntar por que ela ainda não terminou.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#A33B2B">—</span>Confrontar o agressor por conta própria.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#A33B2B">—</span>Dar ultimatos ou condicionar o seu apoio à decisão dela.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#A33B2B">—</span>Expor a situação para outras pessoas sem o consentimento dela.</li>
+            <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.7;color:#231A2E"><span style="color:#A33B2B">—</span>Desaparecer quando ela voltar atrás.</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin:0;font-size:14px;line-height:1.8;color:#574B63;max-width:70ch;border-left:1px solid rgba(25,18,32,0.2);padding-left:20px">Em situação de risco imediato, qualquer pessoa pode acionar o 190. A denúncia de violência doméstica não depende da vítima registrar o boletim sozinha.</p>
+    </div>
+  </section>
+
+  <section id="ajuda" data-screen-label="Buscar ajuda" style="padding:clamp(64px,9vw,130px) clamp(20px,5vw,72px);background:#F7F4F9">
+    <div style="max-width:1180px;margin:0 auto;display:grid;gap:clamp(36px,5vw,56px)">
+      <div style="display:grid;gap:18px;max-width:700px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Onde buscar ajuda</span>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em">Você não precisa resolver tudo hoje</h2>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63">Todos os serviços abaixo são gratuitos. Você pode ligar apenas para tirar dúvidas, sem registrar denúncia.</p>
+      </div>
+      <div style="display:grid;gap:1px;background:rgba(35,26,46,0.12);grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))">
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,36px);display:grid;gap:12px;align-content:start">
+          <h3 style="margin:0;font-weight:500;font-size:24px">Ligue 180</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Central de Atendimento à Mulher. Orienta, encaminha para serviços da sua cidade e recebe denúncias. Funciona 24 horas, inclusive de fora do Brasil.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,36px);display:grid;gap:12px;align-content:start">
+          <h3 style="margin:0;font-weight:500;font-size:24px">Delegacia da Mulher</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Registro do boletim de ocorrência e pedido de medida protetiva de urgência. Onde não houver DEAM, qualquer delegacia é obrigada a atender.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,36px);display:grid;gap:12px;align-content:start">
+          <h3 style="margin:0;font-weight:500;font-size:24px">Defensoria Pública</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Assistência jurídica gratuita para medida protetiva, divórcio, guarda dos filhos e pensão.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,36px);display:grid;gap:12px;align-content:start">
+          <h3 style="margin:0;font-weight:500;font-size:24px">CRAS e CREAS</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Acompanhamento social, psicológico e acesso a benefícios. Ponto de apoio para quem precisa reorganizar a vida material.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,36px);display:grid;gap:12px;align-content:start">
+          <h3 style="margin:0;font-weight:500;font-size:24px">UBS e hospitais</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Atendimento de saúde e registro do que aconteceu no prontuário — importante como prova. Em caso de violência sexual, procure o serviço nas primeiras 72 horas.</p>
+        </div>
+        <div style="background:#FFFFFF;padding:clamp(26px,3vw,36px);display:grid;gap:12px;align-content:start">
+          <h3 style="margin:0;font-weight:500;font-size:24px">Na faculdade</h3>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#574B63">Procure a ouvidoria, o núcleo de apoio ao estudante ou o serviço de psicologia da instituição. <em style="color:#5A4F6B">Substitua por contatos e endereços da sua cidade.</em></p>
+        </div>
+      </div>
+      <div style="display:grid;gap:14px;border:1px solid rgba(107,63,160,0.35);padding:clamp(24px,3vw,34px);max-width:820px">
+        <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#6B3FA0">Antes de sair de casa</span>
+        <p style="margin:0;font-size:15.5px;line-height:1.8;color:#332843">Guarde documentos seus e das crianças em um lugar de fácil acesso, tenha dinheiro separado, deixe uma cópia das chaves com alguém de confiança e combine um endereço seguro. Se puder, salve prints de mensagens e ameaças em um serviço na nuvem.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="campanha" data-screen-label="Campanha" style="padding:clamp(64px,9vw,130px) clamp(20px,5vw,72px);background:#EDE6F2">
+    <div style="max-width:1180px;margin:0 auto;display:grid;gap:clamp(32px,4vw,52px)">
+      <div style="display:grid;gap:16px;max-width:700px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Peças da campanha</span>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em">Recomeçar também é uma vitória</h2>
+      </div>
+      <div style="display:grid;gap:clamp(16px,2vw,26px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+        <figure style="margin:0;display:grid;gap:12px"><img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (1).jpeg" alt="O que parecia amor, também machucava" style="width:100%;height:auto;display:block;border-radius:2px" /><figcaption style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5A4F6B">Sinais invisíveis</figcaption></figure>
+        <figure style="margin:0;display:grid;gap:12px"><img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (2).jpeg" alt="Não é normal" style="width:100%;height:auto;display:block;border-radius:2px" /><figcaption style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5A4F6B">Não é normal</figcaption></figure>
+        <figure style="margin:0;display:grid;gap:12px"><img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (4).jpeg" alt="A violência também quebra a forma como você se vê" style="width:100%;height:auto;display:block;border-radius:2px" /><figcaption style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5A4F6B">Essência inteira</figcaption></figure>
+        <figure style="margin:0;display:grid;gap:12px"><img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (3).jpeg" alt="Recomeçar também é uma vitória" style="width:100%;height:auto;display:block;border-radius:2px" /><figcaption style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5A4F6B">Recomeço</figcaption></figure>
+        <figure style="margin:0;display:grid;gap:12px"><img src="uploads/WhatsApp Image 2026-09-16 at 15.50.17 (5).jpeg" alt="Depois de tanta dor, ainda existe vida, e ela pode ser linda" style="width:100%;height:auto;display:block;border-radius:2px" /><figcaption style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5A4F6B">Esperança</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimento" data-screen-label="Depoimento" style="padding:clamp(56px,8vw,110px) clamp(20px,5vw,72px);background:#241A2E">
+    <div style="max-width:820px;margin:0 auto;display:grid;gap:22px;justify-items:start">
+      <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#C3B0DC">Depoimento de uma participante do projeto</span>
+      <h2 style="margin:0;font-weight:500;font-size:clamp(28px,3.8vw,46px);line-height:1.16;letter-spacing:-0.02em;color:#F6F2FA;text-wrap:pretty">Quando o controle deixa de ser cuidado e se transforma em violência</h2>
+      <p style="margin:0;font-size:16px;line-height:1.8;color:#CFC5DB;max-width:60ch">Um relato real adaptado para fins de conscientização sobre a violência nos relacionamentos. Começou como um sonho de amor e se tornou controle, isolamento e agressão, até o momento em que ela decidiu voltar para casa.</p>
+      <a href="Depoimento.dc.html" style="padding:16px 32px;background:#6B3FA0;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px;transition:background .2s" style-hover="background:#F6F2FA;color:#231A2E">Ler o depoimento</a>
+    </div>
+  </section>
+
+  <section id="formulario" data-screen-label="Chamada do formulário" style="padding:clamp(56px,8vw,110px) clamp(20px,5vw,72px);background:#EDE6F2">
+    <div style="max-width:820px;margin:0 auto;display:grid;gap:22px;justify-items:start">
+      <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Autoavaliação anônima</span>
+      <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em">“Isso é cuidado ou violência?”</h2>
+      <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63;max-width:60ch">Sete perguntas curtas para pensar sobre o seu relacionamento. É anônimo, nenhuma resposta é obrigatória e leva menos de três minutos.</p>
+      <a href="Formulario.dc.html" style="padding:16px 32px;background:#6B3FA0;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px;transition:background .2s" style-hover="background:#231A2E">Preencher o formulário</a>
+    </div>
+  </section>
+
+  <section data-screen-label="Esperança" style="padding:clamp(72px,10vw,150px) clamp(20px,5vw,72px);background:#241A2E">
+    <div style="max-width:1180px;margin:0 auto;display:grid;justifyItems:start;gap:24px">
+      <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4.4vw,52px);line-height:1.15;letter-spacing:-0.02em;max-width:18ch;color:#F6F2FA;text-wrap:pretty">Depois de tanta dor, ainda existe vida, e ela pode ser linda.</h2>
+      <span style="display:block;width:64px;height:1px;background:rgba(255,255,255,0.35)"></span>
+      <p style="margin:0;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;line-height:2.1;color:#CFC5DB">A esperança também faz parte dessa história.</p>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(48px,6vw,80px) clamp(20px,5vw,72px);background:#EDE6F2;borderTop:1px solid rgba(244,241,245,0.1)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;gap:clamp(28px,4vw,44px)">
+      <div style="display:grid;gap:clamp(24px,4vw,40px);grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))">
+        <div style="display:grid;gap:10px;align-content:start">
+          <span style="font-weight:500;font-size:22px">Essência Inteira</span>
+          <p style="margin:0;font-size:14px;line-height:1.75;color:#5A4F6B">Campanha de informação, acolhimento, conscientização e liberdade.</p>
+        </div>
+        <div style="display:grid;gap:10px;align-content:start">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#6B3FA0">Emergência</span>
+          <p style="margin:0;font-size:14px;line-height:1.9;color:#574B63">180 — Central de Atendimento à Mulher<br />190 — Polícia Militar<br />100 — Direitos Humanos</p>
+        </div>
+        <div style="display:grid;gap:10px;align-content:start">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#6B3FA0">Trabalho acadêmico</span>
+          <p style="margin:0;font-size:14px;line-height:1.9;color:#574B63">Disciplina — a definir<br />Grupo — a definir<br />Instituição — a definir</p>
+        </div>
+        <div style="display:grid;gap:10px;align-content:start">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#6B3FA0">Segurança</span>
+          <p style="margin:0;font-size:14px;line-height:1.75;color:#574B63">O botão “Sair rápido” leva você imediatamente a outra página. Depois, apague o histórico do navegador ou use uma janela privada.</p>
+        </div>
+      </div>
+      <p style="margin:0;font-size:12px;line-height:1.8;color:#5A4F6B;max-width:80ch">Conteúdo informativo baseado na Lei nº 11.340/2006 (Lei Maria da Penha). Este site não substitui atendimento jurídico, psicológico ou policial.</p>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;quickExit&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Segurança&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this._onKey = (e) => {
+      if ((this.props.quickExit ?? true) && e.key === "Escape") this.sair();
+    };
+    window.addEventListener("keydown", this._onKey);
+  }
+  componentWillUnmount() { window.removeEventListener("keydown", this._onKey); }
+  sair = () => {
+    const url = "https://www.google.com/search?q=previs%C3%A3o+do+tempo";
+    try { window.top.location.replace(url); } catch (e) { window.location.replace(url); }
+  };
+  renderVals() {
+    return {
+      quickExit: this.props.quickExit ?? true,
+      sair: this.sair
+    };
+  }
+}
+
+</script>
+</body>
+</html>

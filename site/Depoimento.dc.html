@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F4F9; color: #231A2E; font-family: "Jost", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #6B3FA0; text-decoration: none; }
+  a:hover { color: #231A2E; }
+  ::selection { background: #6B3FA0; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,48px);background:rgba(247,244,249,0.88);backdrop-filter:blur(14px);borderBottom:1px solid rgba(35,26,46,0.12)">
+    <a href="Ess%C3%AAncia%20Inteira.dc.html" style="display:flex;flex-direction:column;line-height:1;gap:4px;color:#231A2E">
+      <span style="font-weight:500;font-size:19px;letter-spacing:0.01em">Essência Inteira</span>
+      <span style="font-size:9px;letter-spacing:0.34em;text-transform:uppercase;color:#5A4F6B">Voltar para o site</span>
+    </a>
+    <sc-if value="{{ quickExit }}" hint-placeholder-val="{{ true }}">
+      <button type="button" onClick="{{ sair }}" style="display:flex;align-items:center;gap:8px;border:1px solid rgba(35,26,46,0.24);background:transparent;color:#231A2E;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .2s" style-hover="background:#231A2E;color:#FFFFFF;border-color:#231A2E">
+        <span style="display:block;width:6px;height:6px;border-radius:50%;background:#6B3FA0"></span>Sair rápido
+      </button>
+    </sc-if>
+  </header>
+
+  <section data-screen-label="Depoimento" style="padding:clamp(44px,6vw,84px) clamp(20px,5vw,72px) clamp(40px,5vw,64px);background:#241A2E">
+    <div style="max-width:760px;margin:0 auto;display:grid;gap:20px">
+      <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#C3B0DC">Depoimento de uma participante do projeto</span>
+      <h1 style="margin:0;font-weight:500;font-size:clamp(28px,3.8vw,46px);line-height:1.16;letter-spacing:-0.02em;color:#F6F2FA;text-wrap:pretty">Quando o controle deixa de ser cuidado e se transforma em violência</h1>
+      <p style="margin:0;font-size:16px;line-height:1.8;color:#CFC5DB">Um relato real adaptado para fins de conscientização sobre a violência nos relacionamentos.</p>
+    </div>
+  </section>
+
+  <article style="padding:clamp(48px,7vw,96px) clamp(20px,5vw,72px);background:#F7F4F9">
+    <div style="max-width:700px;margin:0 auto;display:grid;gap:26px">
+
+      <h2 style="margin:0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">Tudo começou como um sonho de amor</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">No início, ela se sentia uma rainha.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ele parecia o príncipe encantado que havia chegado para amá-la, protegê-la e construir uma vida ao seu lado. Havia palavras bonitas, gestos românticos e a promessa de um relacionamento feliz.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela acreditou naquele amor.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Com o passar do tempo, entretanto, algumas atitudes começaram a mudar. O que inicialmente parecia cuidado passou a se manifestar como controle.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ele queria saber com quem ela conversava, quais pessoas deveria manter por perto e quem interagia com suas publicações nas redes sociais. Aos poucos, sua liberdade começou a ser limitada.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">O controle se apresentava de maneira sutil. Às vezes, vinha acompanhado de ciúmes. Outras vezes, de declarações de amor ou de uma preocupação que parecia legítima.</p>
+      <p style="margin:0;padding-left:22px;border-left:2px solid #6B3FA0;font-size:19px;line-height:1.7;font-weight:500;color:#231A2E">Mas o cuidado não deveria exigir que uma pessoa abrisse mão da própria autonomia.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">E, sem perceber completamente o que estava acontecendo, ela começou a se adaptar às exigências do relacionamento.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">Quando dizer “não” deixou de parecer uma opção</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Certo dia, ele propôs que os dois fizessem uma tatuagem com o nome um do outro.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Disse que, caso ela não quisesse fazer a dele, não haveria problema.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas, diante do silêncio e da expectativa por uma resposta, ela não teve o tempo necessário para refletir sobre o que realmente desejava.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">No dia seguinte, ele informou que já havia marcado o procedimento com a tatuadora.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela se sentiu confusa.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">No fundo, não queria fazer aquela tatuagem. Sentia que algo não estava certo, mas ainda não conseguia compreender por que tinha tanta dificuldade de expressar sua vontade.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">As declarações românticas continuavam presentes:</p>
+      <p style="margin:0;padding:22px 26px;background:#EDE6F2;font-size:18.5px;line-height:1.7;color:#231A2E;border-radius:2px">“A gente quer casar no papel. Já moramos juntos, não pensamos em nos separar. Temos um relacionamento muito bom.”</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela foi convencida de que aquela decisão fazia parte da história de amor que estavam construindo.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mais tarde, durante seu processo de autoconhecimento, começou a perceber que havia sido submetida a uma pressão emocional.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ainda no relacionamento, manifestou o desejo de remover a tatuagem.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A resposta dele foi ríspida:</p>
+      <p style="margin:0;padding:22px 26px;background:#EDE6F2;font-size:18.5px;line-height:1.7;color:#231A2E;border-radius:2px">“Faça o que você quiser. Também vou tirar a minha, já que você vai tirar a sua.”</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A partir daquele momento, os conflitos se tornaram cada vez mais frequentes.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">Quando a mulher começa a duvidar de si mesma</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">As discussões passaram a fazer parte da rotina.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Uma pergunta, um comentário ou um assunto aparentemente simples podiam desencadear um novo conflito. Ela começou a antecipar as brigas e a sentir que precisava medir cada palavra para evitar uma reação negativa.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ao final, a culpa quase sempre recaía sobre ela.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Era chamada de maluca. Ouvia que ninguém conseguiria conviver com seu jeito. Depois das discussões, vinha o silêncio, utilizado como uma forma de punição e afastamento.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela passou a viver em constante tensão.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Tentava compreender o que estava fazendo de errado. Buscava maneiras de melhorar o relacionamento, de evitar os conflitos e de preservar a convivência.</p>
+      <p style="margin:0;padding-left:22px;border-left:2px solid #6B3FA0;font-size:19px;line-height:1.7;font-weight:500;color:#231A2E">Mas a responsabilidade por manter uma relação saudável não pode ser colocada exclusivamente sobre uma das pessoas.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A violência psicológica pode fazer com que a vítima questione suas próprias percepções, sentimentos e decisões. Isso não significa que ela seja fraca. Significa que está vivendo uma situação que pode comprometer sua segurança emocional e sua autonomia.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">A primeira agressão física</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Em determinado momento, as discussões evoluíram para agressões físicas.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Veio o primeiro soco no olho.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela foi acolhida por familiares que moravam próximos e, naquele contexto, descobriu que outras duas ex-companheiras dele também haviam sofrido agressões. Uma havia denunciado; a outra, não.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A descoberta trouxe uma nova dimensão à realidade que ela vivia.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas compreender a gravidade de uma violência nem sempre acontece imediatamente, especialmente quando a vítima está emocionalmente dependente, distante da família e sem uma rede de apoio estruturada.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela morava longe dos pais, em outro estado, enfrentava um custo de vida alto e havia começado recentemente em um novo emprego.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Estava vulnerável.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Após a agressão, ele chorou e afirmou que aquilo nunca mais aconteceria. Entretanto, também disse que ela havia ido para cima dele.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A justificativa fez com que ela acreditasse que talvez tivesse alguma responsabilidade pelo que havia acontecido.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">E esse pensamento a confundiu ainda mais.</p>
+      <p style="margin:0;padding-left:22px;border-left:2px solid #6B3FA0;font-size:19px;line-height:1.7;font-weight:500;color:#231A2E">Nenhuma atitude, discussão ou reação emocional da vítima justifica uma agressão física. A responsabilidade pela violência pertence a quem a pratica.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A vítima não precisa ser perfeita, calma ou capaz de reagir da maneira ideal para ter direito à segurança e ao respeito.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">A violência que também atinge a autoestima</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ele falava sobre suas ex-companheiras, provocando ciúmes e inseguranças.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Com o tempo, ela percebeu que assuntos relacionados às antigas relações se transformavam em motivos recorrentes para discussões. Sentia-se comparada, diminuída e emocionalmente fragilizada.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Sua autoestima foi sendo afetada.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela começou a duvidar do próprio valor, da sua capacidade e da possibilidade de ser amada de maneira saudável.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A diferença física entre os dois também contribuía para sua sensação de vulnerabilidade. Ele era um homem forte, de quase dois metros de altura, e ela se sentia cada vez mais insegura diante das situações de agressividade.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Depois da primeira agressão, vieram momentos que pareciam trazer a tranquilidade de volta.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Um passeio de moto em um lugar especial. A convivência retomada. A impressão de que as coisas poderiam melhorar.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas ela ainda carregava as marcas da violência.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Usava maquiagem para esconder o roxo e óculos para disfarçar a agressão.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Por fora, a vida parecia continuar.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Por dentro, a dor permanecia.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">O controle sobre a rotina e a dependência financeira</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Se chegasse dois minutos mais tarde do que o horário habitual do trabalho, isso já poderia ser motivo de discussão.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">O controle sobre seus horários aumentava sua sensação de vigilância. Ela precisava estar atenta ao tempo, às palavras e às atitudes para tentar evitar novos conflitos.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Em seguida, ele passou a desvalorizar o trabalho dela, utilizando seu conhecimento sobre o ambiente profissional para fazer críticas.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Então surgiu uma proposta:</p>
+      <p style="margin:0;padding:22px 26px;background:#EDE6F2;font-size:18.5px;line-height:1.7;color:#231A2E;border-radius:2px">“Como já fazemos tudo juntos, gostamos de ficar o tempo inteiro juntos, vamos abrir algo para a gente.”</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A ideia de construir um negócio em conjunto parecia uma oportunidade de compartilhar sonhos.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas, naquele contexto, a iniciativa também contribuiu para aprofundar a dependência financeira entre os dois.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">No início, as coisas pareciam funcionar.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Com o passar do tempo, porém, os problemas surgiram, e os planos não se sustentaram como ela esperava.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela continuou tentando encontrar maneiras de melhorar a relação. Conversava, refletia e buscava soluções.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Enquanto isso, a sensação de precisar caminhar sobre ovos se tornava cada vez mais presente.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">O momento em que a vida esteve em risco</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Certo dia, havia um plano de acampamento com amigos. Tudo estava organizado e preparado.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Era para ser um momento de lazer.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas uma discussão começou e evoluiu para uma nova agressão física.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A situação se tornou extremamente grave.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela estava deitada em outro quarto quando ele entrou, subiu na cama e colocou uma faca em seu pescoço.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Naquele instante, ela pensou que poderia morrer.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">O medo tomou conta dela.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A ameaça não era apenas uma discussão. Era uma situação de risco à sua vida.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Depois daquele episódio, ela saiu de casa e passou alguns dias na residência de uma amiga. Em seguida, alugou um apartamento para morar com seu cachorro.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Parecia que, finalmente, estava encontrando uma saída.</p>
+      <p style="margin:0;padding-left:22px;border-left:2px solid #6B3FA0;font-size:19px;line-height:1.7;font-weight:500;color:#231A2E">Mas sair de uma relação abusiva não é apenas abrir uma porta e ir embora.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Existiam a dependência financeira, o medo, a insegurança e os vínculos emocionais construídos ao longo dos anos.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Por isso, ela permitiu que ele fosse morar naquele novo apartamento.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Não porque a violência fosse aceitável.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Não porque desejasse continuar sofrendo.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas porque, naquele momento, ainda enfrentava dificuldades para romper completamente aquele vínculo.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">Quando o corpo começa a revelar o que a mente tenta suportar</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Alguns meses se passaram em uma aparente tranquilidade.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Até que outra agressão aconteceu.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Um empurrão contra uma televisão provocou uma fratura em seu nariz.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A tristeza que sentiu foi profunda.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A partir dali, algo começou a mudar dentro dela.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela passou a enfrentar dificuldade para relaxar, baixa autoestima, medo constante e um incômodo que não conseguia mais ignorar.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Seu corpo parecia permanecer em alerta.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A relação, que antes ela tentava preservar a qualquer custo, começou a ser percebida de outra maneira.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela passou a compreender que o sofrimento não era um problema que poderia resolver simplesmente sendo mais paciente, mais cuidadosa ou fazendo mais esforços.</p>
+      <p style="margin:0;padding-left:22px;border-left:2px solid #6B3FA0;font-size:19px;line-height:1.7;font-weight:500;color:#231A2E">A violência não era responsabilidade dela.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">A fé e o processo de despertar</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Sempre muito ligada a Deus, ela buscou respostas em sua fé e na leitura da Bíblia.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Queria compreender o que estava vivendo e encontrar forças para seguir em frente.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Durante esse processo, sentiu que algumas pessoas foram instrumentos de alerta em sua vida.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Uma delas, com quem infelizmente não mantém mais contato, percebeu comportamentos preocupantes no companheiro e conversou com ela.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Aquelas palavras contribuíram para que começasse a olhar para o relacionamento de outra maneira.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela passou a pesquisar, refletir e buscar compreender os comportamentos que vivenciava.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">O autoconhecimento tornou-se uma ferramenta importante.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Aos poucos, reconheceu padrões de controle, manipulação e violência. Começou a entender que aquele amor não era saudável e que o sofrimento que sentia não deveria ser normalizado.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas reconhecer a violência não significa que a mulher imediatamente se sinta preparada para sair.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">O medo pode permanecer. A dependência pode dificultar as decisões. A vergonha pode impedir que ela peça ajuda.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Cada história possui suas próprias circunstâncias.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">O caminho de volta para casa</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Com muito medo e vergonha, ela decidiu pedir apoio aos pais para retornar à sua cidade natal.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Precisava reconstruir sua vida e recuperar a proximidade com sua família.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A saída exigiu planejamento e cautela. Ela buscou conduzir uma conversa de maneira madura, sincera e com comunicação não violenta, pensando em como conseguir deixar aquela relação com segurança.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Não foi um processo simples.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela estava tentando recuperar o controle sobre a própria vida em uma situação na qual, durante muito tempo, havia sentido que suas escolhas estavam condicionadas às reações do companheiro.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Dessa vez, precisava priorizar a própria segurança.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">A violência que não terminou com a separação</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A separação não encerrou imediatamente todas as dificuldades.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ele ainda tentou exercer controle sobre ela. Houve exposição de imagens íntimas, difamação e conflitos relacionados às responsabilidades financeiras.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Contas não foram acertadas como esperado, e ela enfrentou dívidas que se tornaram mais um peso em sua vida.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">As consequências emocionais permaneceram.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Os traumas e as crises de ansiedade eram tão intensos que falar sobre ele já provocava sofrimento.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">O medo e a vergonha também influenciaram sua decisão de não denunciá-lo.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Sua história mostra que a violência pode continuar produzindo efeitos mesmo depois que a mulher se afasta fisicamente do agressor.</p>
+      <p style="margin:0;padding-left:22px;border-left:2px solid #6B3FA0;font-size:19px;line-height:1.7;font-weight:500;color:#231A2E">Por isso, o acolhimento não deve terminar quando a relação chega ao fim.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">Quantas mulheres vivem histórias semelhantes?</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Quantas mulheres passam por situações de controle, manipulação e violência e não conseguem denunciar?</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Quantas não encontram uma rede de apoio?</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Quantas acreditam que precisam suportar o sofrimento para preservar uma relação?</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Quantas confundem ciúme com amor, controle com cuidado e silêncio com paz?</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A violência nos relacionamentos nem sempre começa com uma agressão física. Pode se manifestar por meio de humilhações, ameaças, isolamento, controle financeiro, vigilância e restrições à liberdade.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Reconhecer esses sinais é importante.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas é igualmente importante compreender que a mulher não deve ser responsabilizada por permanecer em uma relação abusiva ou por não conseguir denunciar.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ela pode estar com medo. Pode depender financeiramente do companheiro. Pode estar isolada, confusa ou sem condições de sair naquele momento.</p>
+      <p style="margin:0;padding-left:22px;border-left:2px solid #6B3FA0;font-size:19px;line-height:1.7;font-weight:500;color:#231A2E">O que ela precisa é de informação, acolhimento e apoio seguro.</p>
+
+      <h2 style="margin:18px 0 0;font-weight:600;font-size:clamp(21px,2.4vw,27px);line-height:1.3;color:#231A2E">Uma história que se transforma em conscientização</h2>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Ao olhar para sua trajetória, essa mulher compreendeu a importância do autoconhecimento e da informação.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Aprendeu que o amor não deve exigir o abandono da própria identidade, da liberdade ou da dignidade.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Aprendeu que não é preciso esperar uma agressão física para reconhecer que um relacionamento pode ser abusivo.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Aprendeu que pedir ajuda não é sinal de fraqueza.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">E que a culpa nunca deve ser colocada sobre quem sofre a violência.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Sua história não representa todas as mulheres. Cada vítima possui uma realidade, uma história e condições diferentes.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">Mas seu relato pode ajudar outras pessoas a reconhecerem sinais que, muitas vezes, permanecem escondidos atrás de palavras bonitas, promessas de amor e momentos de aparente tranquilidade.</p>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#332843">A informação pode abrir os olhos. O acolhimento pode oferecer segurança. E uma rede de apoio pode ajudar uma mulher a reencontrar sua autonomia.</p>
+    </div>
+  </article>
+
+  <section data-screen-label="Fechamento" style="padding:clamp(56px,8vw,110px) clamp(20px,5vw,72px);background:#241A2E">
+    <div style="max-width:700px;margin:0 auto;display:grid;gap:22px">
+      <p style="margin:0;font-weight:500;font-size:clamp(21px,2.6vw,30px);line-height:1.45;color:#F6F2FA;text-wrap:pretty">Nenhuma mulher precisa provar que ama suportando a violência.</p>
+      <p style="margin:0;font-weight:500;font-size:clamp(21px,2.6vw,30px);line-height:1.45;color:#F6F2FA;text-wrap:pretty">Nenhuma mulher deve ser responsabilizada pela agressão que sofreu.</p>
+      <p style="margin:0;font-weight:500;font-size:clamp(21px,2.6vw,30px);line-height:1.45;color:#F6F2FA;text-wrap:pretty">E nenhuma mulher deveria precisar enfrentar essa realidade sozinha.</p>
+      <span style="display:block;width:64px;height:1px;background:rgba(255,255,255,0.35)"></span>
+      <p style="margin:0;font-size:17.5px;line-height:1.85;color:#CFC5DB">Que essa história não seja apenas lembrada pelo sofrimento, mas também pela importância de reconhecer a violência, oferecer apoio e construir caminhos para a liberdade.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
+        <a href="https://www.psymeetsocial.com/busca" target="_blank" rel="noopener" style="padding:15px 30px;background:#6B3FA0;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px">Preciso de ajuda</a>
+        <a href="Ess%C3%AAncia%20Inteira.dc.html#ajuda" style="padding:15px 30px;border:1px solid rgba(255,255,255,0.3);color:#F6F2FA;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px">Onde buscar ajuda</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(40px,6vw,72px) clamp(20px,5vw,72px);background:#EDE6F2">
+    <div style="max-width:700px;margin:0 auto;display:grid;gap:14px">
+      <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#6B3FA0">Se precisar de ajuda agora</span>
+      <p style="margin:0;font-size:15.5px;line-height:1.9;color:#332843">180 — Central de Atendimento à Mulher, gratuito e sigiloso, 24 horas<br />190 — Polícia Militar, em caso de risco imediato<br />Delegacia da Mulher — boletim de ocorrência e medida protetiva</p>
+      <p style="margin:0;font-size:12px;line-height:1.8;color:#5A4F6B">O botão “Sair rápido” leva você imediatamente a outra página. Depois, apague o histórico do navegador ou use uma janela privada.</p>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;quickExit&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Segurança&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this._onKey = (e) => {
+      if ((this.props.quickExit ?? true) && e.key === "Escape") this.sair();
+    };
+    window.addEventListener("keydown", this._onKey);
+  }
+  componentWillUnmount() { window.removeEventListener("keydown", this._onKey); }
+  sair = () => {
+    const url = "https://www.google.com/search?q=previs%C3%A3o+do+tempo";
+    try { window.top.location.replace(url); } catch (e) { window.location.replace(url); }
+  };
+  renderVals() {
+    return { quickExit: this.props.quickExit ?? true, sair: this.sair };
+  }
+}
+
+</script>
+</body>
+</html>

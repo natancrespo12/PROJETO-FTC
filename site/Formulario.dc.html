@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F4F9; color: #231A2E; font-family: "Jost", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #6B3FA0; text-decoration: none; }
+  a:hover { color: #231A2E; }
+  ::selection { background: #6B3FA0; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,48px);background:rgba(247,244,249,0.88);backdrop-filter:blur(14px);borderBottom:1px solid rgba(35,26,46,0.12)">
+    <a href="Ess%C3%AAncia%20Inteira.dc.html" style="display:flex;flex-direction:column;line-height:1;gap:4px;color:#231A2E">
+      <span style="font-weight:500;font-size:19px;letter-spacing:0.01em">Essência Inteira</span>
+      <span style="font-size:9px;letter-spacing:0.34em;text-transform:uppercase;color:#5A4F6B">Voltar para o site</span>
+    </a>
+    <sc-if value="{{ quickExit }}" hint-placeholder-val="{{ true }}">
+      <button type="button" onClick="{{ sair }}" style="display:flex;align-items:center;gap:8px;border:1px solid rgba(35,26,46,0.24);background:transparent;color:#231A2E;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .2s" style-hover="background:#231A2E;color:#FFFFFF;border-color:#231A2E">
+        <span style="display:block;width:6px;height:6px;border-radius:50%;background:#6B3FA0"></span>Sair rápido
+      </button>
+    </sc-if>
+  </header>
+
+  <section data-screen-label="Formulário" style="padding:clamp(48px,7vw,96px) clamp(20px,5vw,72px) clamp(64px,9vw,120px);background:#EDE6F2">
+    <div style="max-width:820px;margin:0 auto;display:grid;gap:clamp(28px,4vw,44px)">
+      <div style="display:grid;gap:18px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Autoavaliação anônima</span>
+        <h1 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em">“Isso é cuidado ou violência?”</h1>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63">Este formulário é anônimo e tem como objetivo promover reflexão e conscientização sobre situações de violência nos relacionamentos.<br />Você não precisa se identificar e não é necessário responder nenhuma pergunta que cause desconforto.<br />Se alguma situação descrita fizer parte da sua realidade, saiba que você não está sozinho(a) e que existe ajuda.</p>
+      </div>
+
+      <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;gap:18px;background:#241A2E;padding:clamp(28px,4vw,44px);border-radius:2px">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#B3A6C2">Respostas registradas</span>
+          <h2 style="margin:0;font-weight:500;font-size:clamp(22px,2.8vw,30px);line-height:1.25;color:#F6F2FA">Obrigado por parar para pensar sobre isso.</h2>
+          <p style="margin:0;font-size:15.5px;line-height:1.8;color:#CFC5DB">Medo de reação, invasão de privacidade, dificuldade de dizer “não” e contato físico forçado não são detalhes de um relacionamento: são sinais de violência. Se você reconheceu alguma dessas situações, procurar informação já é um passo.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:4px">
+            <a href="Ess%C3%AAncia%20Inteira.dc.html#ajuda" style="padding:14px 28px;background:#6B3FA0;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px">Onde buscar ajuda</a>
+            <a href="Ess%C3%AAncia%20Inteira.dc.html#sinais" style="padding:14px 28px;border:1px solid rgba(255,255,255,0.3);color:#F6F2FA;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px">Rever os sinais</a>
+          </div>
+          <p style="margin:0;font-size:13px;line-height:1.7;color:#B3A6C2">Ligue 180 — gratuito, sigiloso, 24 horas. Em risco imediato, ligue 190.</p>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ aberto }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid;gap:clamp(20px,3vw,28px)">
+          <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
+            <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">1. Você está ou já esteve em um relacionamento afetivo?</p>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q1" value="Sim, atualmente" onChange="{{ on1 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim, atualmente</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q1" value="Sim, anteriormente" onChange="{{ on1 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim, anteriormente</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q1" value="Não" onChange="{{ on1 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Não</label>
+          </div>
+
+          <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
+            <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">2. Você já deixou de fazer algo que queria por medo da reação do parceiro(a)?</p>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q2" value="Nunca" onChange="{{ on2 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q2" value="Às vezes" onChange="{{ on2 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Às vezes</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q2" value="Frequentemente" onChange="{{ on2 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Frequentemente</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q2" value="Sempre" onChange="{{ on2 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sempre</label>
+          </div>
+
+          <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
+            <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">3. Já teve sua privacidade invadida, como celular, mensagens, redes sociais ou localização, sem sua vontade?</p>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q3" value="Nunca" onChange="{{ on3 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q3" value="Às vezes" onChange="{{ on3 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Às vezes</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q3" value="Frequentemente" onChange="{{ on3 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Frequentemente</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q3" value="Sempre" onChange="{{ on3 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sempre</label>
+          </div>
+
+          <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
+            <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">4. Você já foi empurrado(a), segurado(a) à força, agarrado(a), puxado(a), apertado(a) ou agredido(a)?</p>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q4" value="Nunca" onChange="{{ on4 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q4" value="Uma vez" onChange="{{ on4 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Uma vez</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q4" value="Algumas vezes" onChange="{{ on4 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Algumas vezes</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q4" value="Muitas vezes" onChange="{{ on4 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Muitas vezes</label>
+          </div>
+
+          <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
+            <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">5. Você já teve medo de dizer “não” ou discordar do seu/sua parceiro(a) por medo do que poderia acontecer?</p>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q5" value="Nunca" onChange="{{ on5 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q5" value="Às vezes" onChange="{{ on5 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Às vezes</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q5" value="Frequentemente" onChange="{{ on5 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Frequentemente</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q5" value="Sempre" onChange="{{ on5 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sempre</label>
+          </div>
+
+          <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
+            <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">6. Depois de responder essas perguntas, você reconhece alguma dessas situações como algo que acontece ou já aconteceu com você?</p>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q6" value="Sim" onChange="{{ on6 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q6" value="Talvez / não tenho certeza" onChange="{{ on6 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Talvez / não tenho certeza</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q6" value="Não" onChange="{{ on6 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Não</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q6" value="Prefiro não responder" onChange="{{ on6 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Prefiro não responder</label>
+          </div>
+
+          <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
+            <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">7. Você gostaria de receber informações sobre onde buscar ajuda?</p>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q7" value="Sim" onChange="{{ on7 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q7" value="Não" onChange="{{ on7 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Não</label>
+            <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q7" value="Prefiro não responder" onChange="{{ on7 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Prefiro não responder</label>
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px">
+            <button type="button" onClick="{{ enviar }}" style="padding:16px 32px;background:#6B3FA0;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border:none;border-radius:999px;cursor:pointer;transition:background .2s" style-hover="background:#231A2E">Enviar respostas</button>
+            <span style="font-size:13px;line-height:1.7;color:#5A4F6B">Nenhuma resposta é obrigatória. As respostas ficam apenas neste dispositivo.</span>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(40px,6vw,72px) clamp(20px,5vw,72px);background:#241A2E">
+    <div style="max-width:820px;margin:0 auto;display:grid;gap:14px">
+      <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#B3A6C2">Se precisar de ajuda agora</span>
+      <p style="margin:0;font-size:15.5px;line-height:1.9;color:#CFC5DB">180 — Central de Atendimento à Mulher, gratuito e sigiloso, 24 horas<br />190 — Polícia Militar, em caso de risco imediato<br />Delegacia da Mulher — boletim de ocorrência e medida protetiva</p>
+      <p style="margin:0;font-size:12px;line-height:1.8;color:#B3A6C2">O botão “Sair rápido” leva você imediatamente a outra página. Depois, apague o histórico do navegador ou use uma janela privada.</p>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;quickExit&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Segurança&quot;},&quot;formularioExterno&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Coleta de respostas&quot;}}">
+class Component extends DCLogic {
+  state = { respostas: {}, enviado: false };
+  componentDidMount() {
+    this._onKey = (e) => {
+      if ((this.props.quickExit ?? true) && e.key === "Escape") this.sair();
+    };
+    window.addEventListener("keydown", this._onKey);
+  }
+  componentWillUnmount() { window.removeEventListener("keydown", this._onKey); }
+  sair = () => {
+    const url = "https://www.google.com/search?q=previs%C3%A3o+do+tempo";
+    try { window.top.location.replace(url); } catch (e) { window.location.replace(url); }
+  };
+  set = (k) => (e) => {
+    const v = e.target.value;
+    this.setState((s) => ({ respostas: Object.assign({}, s.respostas, { [k]: v }) }));
+  };
+  enviar = () => {
+    const externo = this.props.formularioExterno;
+    if (externo) { window.open(externo, "_blank", "noopener"); }
+    try { localStorage.setItem("ei-form", JSON.stringify(this.state.respostas)); } catch (e) {}
+    this.setState({ enviado: true });
+  };
+  renderVals() {
+    return {
+      quickExit: this.props.quickExit ?? true,
+      sair: this.sair,
+      enviado: this.state.enviado,
+      aberto: !this.state.enviado,
+      enviar: this.enviar,
+      on1: this.set("q1"), on2: this.set("q2"), on3: this.set("q3"), on4: this.set("q4"),
+      on5: this.set("q5"), on6: this.set("q6"), on7: this.set("q7")
+    };
+  }
+}
+
+</script>
+</body>
+</html>

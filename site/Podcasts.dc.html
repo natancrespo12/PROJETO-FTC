@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F4F9; color: #231A2E; font-family: "Jost", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #6B3FA0; text-decoration: none; }
+  a:hover { color: #231A2E; }
+  ::selection { background: #6B3FA0; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,48px);background:rgba(247,244,249,0.88);backdrop-filter:blur(14px);borderBottom:1px solid rgba(35,26,46,0.12)">
+    <a href="Ess%C3%AAncia%20Inteira.dc.html" style="display:flex;flex-direction:column;line-height:1;gap:4px;color:#231A2E">
+      <span style="font-weight:500;font-size:19px;letter-spacing:0.01em">Essência Inteira</span>
+      <span style="font-size:9px;letter-spacing:0.34em;text-transform:uppercase;color:#5A4F6B">Voltar para o site</span>
+    </a>
+    <sc-if value="{{ quickExit }}" hint-placeholder-val="{{ true }}">
+      <button type="button" onClick="{{ sair }}" style="display:flex;align-items:center;gap:8px;border:1px solid rgba(35,26,46,0.24);background:transparent;color:#231A2E;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .2s" style-hover="background:#231A2E;color:#FFFFFF;border-color:#231A2E">
+        <span style="display:block;width:6px;height:6px;border-radius:50%;background:#6B3FA0"></span>Sair rápido
+      </button>
+    </sc-if>
+  </header>
+
+  <section data-screen-label="Podcasts" style="padding:clamp(48px,7vw,96px) clamp(20px,5vw,72px) clamp(64px,9vw,120px);background:#EDE6F2">
+    <div style="max-width:880px;margin:0 auto;display:grid;gap:clamp(28px,4vw,44px)">
+      <div style="display:grid;gap:18px">
+        <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Reconheça os sinais</span>
+        <h1 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:-0.02em">Podcasts</h1>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#574B63;max-width:62ch">Três episódios sobre como identificar sinais de abuso em um relacionamento. Abrem no Spotify, em uma nova aba.</p>
+      </div>
+
+      <div style="display:grid;gap:clamp(16px,2vw,22px)">
+        <a href="https://open.spotify.com/episode/0fTJaYyYyuHWJ7urKxRYBk?si=IMgnAX2AREGMUnsJFL6Tlg&amp;utm_source=copy-link" target="_blank" rel="noopener" style="display:grid;gap:10px;padding:clamp(22px,3vw,32px);background:#FFFFFF;border-radius:2px;color:#231A2E;transition:background .2s" style-hover="background:#F3EEF8;color:#231A2E">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#6B3FA0">Episódio 1 · Psicologia Sincera</span>
+          <span style="font-size:clamp(19px,2.2vw,24px);font-weight:500;line-height:1.35">“Será que estou em um relacionamento abusivo?”</span>
+          <span style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#5A4F6B">Ouvir no Spotify</span>
+        </a>
+
+        <a href="https://open.spotify.com/episode/7tWCJNaJ0Nliv4NOrXNHMa?si=T2rFeQn3QYS1p1BF5giLKg&amp;utm_source=copy-link" target="_blank" rel="noopener" style="display:grid;gap:10px;padding:clamp(22px,3vw,32px);background:#241A2E;border-radius:2px;color:#F6F2FA;transition:background .2s" style-hover="background:#2E2039;color:#F6F2FA">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#C3B0DC">Episódio 2 · Pod Se Amar · Destaque</span>
+          <span style="font-size:clamp(19px,2.2vw,24px);font-weight:500;line-height:1.35">“20 Sinais de um Relacionamento Abusivo”</span>
+          <span style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#CFC5DB">Ouvir no Spotify</span>
+        </a>
+
+        <a href="https://open.spotify.com/episode/6CT7T5nA8PcRkQHfP8UA3L?si=KqtXNkPHT0eAjO8OutZJug&amp;utm_source=copy-link" target="_blank" rel="noopener" style="display:grid;gap:10px;padding:clamp(22px,3vw,32px);background:#FFFFFF;border-radius:2px;color:#231A2E;transition:background .2s" style-hover="background:#F3EEF8;color:#231A2E">
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#6B3FA0">Episódio 3</span>
+          <span style="font-size:clamp(19px,2.2vw,24px);font-weight:500;line-height:1.35">“Relacionamento abusivo: como identificar e romper este ciclo relacional”</span>
+          <span style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#5A4F6B">Ouvir no Spotify</span>
+        </a>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="Ess%C3%AAncia%20Inteira.dc.html#sinais" style="padding:15px 30px;border:1px solid rgba(35,26,46,0.28);color:#231A2E;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px">Ver os tipos de violência</a>
+        <a href="Formulario.dc.html" style="padding:15px 30px;background:#6B3FA0;color:#FFFFFF;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;border-radius:999px">Preencher o formulário</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(40px,6vw,72px) clamp(20px,5vw,72px);background:#241A2E">
+    <div style="max-width:880px;margin:0 auto;display:grid;gap:14px">
+      <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#B3A6C2">Se precisar de ajuda agora</span>
+      <p style="margin:0;font-size:15.5px;line-height:1.9;color:#CFC5DB">180 — Central de Atendimento à Mulher, gratuito e sigiloso, 24 horas<br />190 — Polícia Militar, em caso de risco imediato<br />Delegacia da Mulher — boletim de ocorrência e medida protetiva</p>
+      <p style="margin:0;font-size:12px;line-height:1.8;color:#B3A6C2">O botão “Sair rápido” leva você imediatamente a outra página. Depois, apague o histórico do navegador ou use uma janela privada.</p>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;quickExit&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Segurança&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this._onKey = (e) => {
+      if ((this.props.quickExit ?? true) && e.key === "Escape") this.sair();
+    };
+    window.addEventListener("keydown", this._onKey);
+  }
+  componentWillUnmount() { window.removeEventListener("keydown", this._onKey); }
+  sair = () => {
+    const url = "https://www.google.com/search?q=previs%C3%A3o+do+tempo";
+    try { window.top.location.replace(url); } catch (e) { window.location.replace(url); }
+  };
+  renderVals() {
+    return { quickExit: this.props.quickExit ?? true, sair: this.sair };
+  }
+}
+
+</script>
+</body>
+</html>
