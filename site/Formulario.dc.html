@@ -57,8 +57,19 @@
 
       <sc-if value="{{ aberto }}" hint-placeholder-val="{{ true }}">
         <div style="display:grid;gap:clamp(20px,3vw,28px)">
+          <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:#FBF7FF;border:1px dashed #6B3FA0;border-radius:8px;padding:16px">
+              <button type="button" onClick="{{ ouvirTudo }}" style="display:flex;align-items:center;gap:10px;background:#6B3FA0;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:none;padding:14px 22px;border-radius:999px;cursor:pointer;min-height:52px">▶ Ouvir a página toda</button>
+              <sc-if value="{{ estaTocando }}" hint-placeholder-val="{{ false }}">
+                <button type="button" onClick="{{ pararAudio }}" style="display:flex;align-items:center;gap:8px;background:#FFFFFF;color:#231A2E;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #231A2E;padding:14px 22px;border-radius:999px;cursor:pointer;min-height:52px">■ Parar</button>
+              </sc-if>
+            </div>
+          </sc-if>
           <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
             <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">1. Você está ou já esteve em um relacionamento afetivo?</p>
+            <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ ouvir1 }}" style="display:inline-flex;align-items:center;gap:10px;align-self:start;background:#EDE6F2;color:#6B3FA0;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #6B3FA0;padding:12px 20px;border-radius:999px;cursor:pointer;min-height:48px">▶ Ouvir a pergunta</button>
+            </sc-if>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q1" value="Sim, atualmente" onChange="{{ on1 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim, atualmente</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q1" value="Sim, anteriormente" onChange="{{ on1 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim, anteriormente</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q1" value="Não" onChange="{{ on1 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Não</label>
@@ -66,6 +77,9 @@
 
           <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
             <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">2. Você já deixou de fazer algo que queria por medo da reação do parceiro(a)?</p>
+            <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ ouvir2 }}" style="display:inline-flex;align-items:center;gap:10px;align-self:start;background:#EDE6F2;color:#6B3FA0;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #6B3FA0;padding:12px 20px;border-radius:999px;cursor:pointer;min-height:48px">▶ Ouvir a pergunta</button>
+            </sc-if>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q2" value="Nunca" onChange="{{ on2 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q2" value="Às vezes" onChange="{{ on2 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Às vezes</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q2" value="Frequentemente" onChange="{{ on2 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Frequentemente</label>
@@ -74,6 +88,9 @@
 
           <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
             <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">3. Já teve sua privacidade invadida, como celular, mensagens, redes sociais ou localização, sem sua vontade?</p>
+            <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ ouvir3 }}" style="display:inline-flex;align-items:center;gap:10px;align-self:start;background:#EDE6F2;color:#6B3FA0;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #6B3FA0;padding:12px 20px;border-radius:999px;cursor:pointer;min-height:48px">▶ Ouvir a pergunta</button>
+            </sc-if>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q3" value="Nunca" onChange="{{ on3 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q3" value="Às vezes" onChange="{{ on3 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Às vezes</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q3" value="Frequentemente" onChange="{{ on3 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Frequentemente</label>
@@ -82,6 +99,9 @@
 
           <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
             <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">4. Você já foi empurrado(a), segurado(a) à força, agarrado(a), puxado(a), apertado(a) ou agredido(a)?</p>
+            <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ ouvir4 }}" style="display:inline-flex;align-items:center;gap:10px;align-self:start;background:#EDE6F2;color:#6B3FA0;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #6B3FA0;padding:12px 20px;border-radius:999px;cursor:pointer;min-height:48px">▶ Ouvir a pergunta</button>
+            </sc-if>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q4" value="Nunca" onChange="{{ on4 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q4" value="Uma vez" onChange="{{ on4 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Uma vez</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q4" value="Algumas vezes" onChange="{{ on4 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Algumas vezes</label>
@@ -90,6 +110,9 @@
 
           <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
             <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">5. Você já teve medo de dizer “não” ou discordar do seu/sua parceiro(a) por medo do que poderia acontecer?</p>
+            <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ ouvir5 }}" style="display:inline-flex;align-items:center;gap:10px;align-self:start;background:#EDE6F2;color:#6B3FA0;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #6B3FA0;padding:12px 20px;border-radius:999px;cursor:pointer;min-height:48px">▶ Ouvir a pergunta</button>
+            </sc-if>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q5" value="Nunca" onChange="{{ on5 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Nunca</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q5" value="Às vezes" onChange="{{ on5 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Às vezes</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q5" value="Frequentemente" onChange="{{ on5 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Frequentemente</label>
@@ -98,6 +121,9 @@
 
           <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
             <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">6. Depois de responder essas perguntas, você reconhece alguma dessas situações como algo que acontece ou já aconteceu com você?</p>
+            <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ ouvir6 }}" style="display:inline-flex;align-items:center;gap:10px;align-self:start;background:#EDE6F2;color:#6B3FA0;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #6B3FA0;padding:12px 20px;border-radius:999px;cursor:pointer;min-height:48px">▶ Ouvir a pergunta</button>
+            </sc-if>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q6" value="Sim" onChange="{{ on6 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q6" value="Talvez / não tenho certeza" onChange="{{ on6 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Talvez / não tenho certeza</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q6" value="Não" onChange="{{ on6 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Não</label>
@@ -106,6 +132,9 @@
 
           <div role="group" style="padding:clamp(22px,3vw,30px);background:#FFFFFF;border-radius:2px;display:grid;gap:14px">
             <p style="margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:#231A2E">7. Você gostaria de receber informações sobre onde buscar ajuda?</p>
+            <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ ouvir7 }}" style="display:inline-flex;align-items:center;gap:10px;align-self:start;background:#EDE6F2;color:#6B3FA0;font-family:'Jost',sans-serif;font-size:16px;font-weight:500;border:1px solid #6B3FA0;padding:12px 20px;border-radius:999px;cursor:pointer;min-height:48px">▶ Ouvir a pergunta</button>
+            </sc-if>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q7" value="Sim" onChange="{{ on7 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Sim</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q7" value="Não" onChange="{{ on7 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Não</label>
             <label style="display:flex;align-items:center;gap:12px;min-height:44px;font-size:15.5px;color:#332843;cursor:pointer"><input type="radio" name="q7" value="Prefiro não responder" onChange="{{ on7 }}" style="accent-color:#6B3FA0;width:18px;height:18px" />Prefiro não responder</label>
@@ -127,33 +156,107 @@
       <p style="margin:0;font-size:12px;line-height:1.8;color:#B3A6C2">O botão “Sair rápido” leva você imediatamente a outra página. Depois, apague o histórico do navegador ou use uma janela privada.</p>
     </div>
   </footer>
+
+  <div style="position:fixed;right:16px;bottom:16px;z-index:100">
+    <sc-if value="{{ modoInclusaoOff }}" hint-placeholder-val="{{ true }}">
+      <button type="button" onClick="{{ toggleInclusao }}" style="display:flex;align-items:center;gap:10px;background:#6B3FA0;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:15px;font-weight:500;border:none;padding:16px 22px;border-radius:999px;cursor:pointer;box-shadow:0 6px 20px rgba(35,26,46,0.28)">🔊 Ouvir o formulário</button>
+    </sc-if>
+    <sc-if value="{{ modoInclusao }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggleInclusao }}" style="display:flex;align-items:center;gap:10px;background:#231A2E;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:15px;font-weight:500;border:1px solid #6B3FA0;padding:16px 22px;border-radius:999px;cursor:pointer;box-shadow:0 6px 20px rgba(35,26,46,0.28)">🔊 Modo áudio ligado — desativar</button>
+    </sc-if>
+  </div>
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;quickExit&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Segurança&quot;},&quot;formularioExterno&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Coleta de respostas&quot;}}">
 class Component extends DCLogic {
-  state = { respostas: {}, enviado: false };
+  state = {
+    respostas: {},
+    enviado: false,
+    modoInclusao: (() => { try { return localStorage.getItem("ei-modo-inclusao") === "1"; } catch (e) { return false; } })(),
+    tocando: null,
+  };
+  _audio = null;
+
   componentDidMount() {
     this._onKey = (e) => {
       if ((this.props.quickExit ?? true) && e.key === "Escape") this.sair();
     };
     window.addEventListener("keydown", this._onKey);
   }
-  componentWillUnmount() { window.removeEventListener("keydown", this._onKey); }
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this._onKey);
+    this.pararAudio();
+  }
+
   sair = () => {
+    this.pararAudio();
     const url = "https://www.google.com/search?q=previs%C3%A3o+do+tempo";
     try { window.top.location.replace(url); } catch (e) { window.location.replace(url); }
   };
+
   set = (k) => (e) => {
     const v = e.target.value;
     this.setState((s) => ({ respostas: Object.assign({}, s.respostas, { [k]: v }) }));
   };
+
+  pararAudio = () => {
+    if (this._audio) { try { this._audio.pause(); } catch (e) {} }
+    this._audio = null;
+    if (this.state.tocando) this.setState({ tocando: null });
+  };
+
+  ouvir = (id) => {
+    this.pararAudio();
+    const a = new Audio("audio/" + id + ".mp3");
+    this._audio = a;
+    a.onended = () => { if (this._audio === a) { this._audio = null; this.setState({ tocando: null }); } };
+    a.onerror = () => { if (this._audio === a) { this._audio = null; this.setState({ tocando: null }); } };
+    this.setState({ tocando: id });
+    a.play().catch(() => {});
+  };
+
+  ouvirTudo = () => {
+    this.pararAudio();
+    const seq = ["intro", "q1", "q2", "q3", "q4", "q5", "q6", "q7"];
+    let i = 0;
+    const tocarProx = () => {
+      if (i >= seq.length) { this._audio = null; this.setState({ tocando: null }); return; }
+      const id = seq[i++];
+      const a = new Audio("audio/" + id + ".mp3");
+      this._audio = a;
+      a.onended = () => { if (this._audio === a) tocarProx(); };
+      a.onerror = () => { if (this._audio === a) tocarProx(); };
+      this.setState({ tocando: id });
+      a.play().catch(() => {});
+    };
+    tocarProx();
+  };
+
+  ouvirIntro = () => this.ouvir("intro");
+  ouvir1 = () => this.ouvir("q1");
+  ouvir2 = () => this.ouvir("q2");
+  ouvir3 = () => this.ouvir("q3");
+  ouvir4 = () => this.ouvir("q4");
+  ouvir5 = () => this.ouvir("q5");
+  ouvir6 = () => this.ouvir("q6");
+  ouvir7 = () => this.ouvir("q7");
+
+  toggleInclusao = () => {
+    const novo = !this.state.modoInclusao;
+    try { localStorage.setItem("ei-modo-inclusao", novo ? "1" : "0"); } catch (e) {}
+    if (!novo) this.pararAudio();
+    this.setState({ modoInclusao: novo });
+  };
+
   enviar = () => {
     const externo = this.props.formularioExterno;
     if (externo) { window.open(externo, "_blank", "noopener"); }
     try { localStorage.setItem("ei-form", JSON.stringify(this.state.respostas)); } catch (e) {}
     this.setState({ enviado: true });
+    if (this.state.modoInclusao) this.ouvir("enviado");
   };
+
   renderVals() {
     return {
       quickExit: this.props.quickExit ?? true,
@@ -161,8 +264,17 @@ class Component extends DCLogic {
       enviado: this.state.enviado,
       aberto: !this.state.enviado,
       enviar: this.enviar,
+      modoInclusao: this.state.modoInclusao,
+      modoInclusaoOff: !this.state.modoInclusao,
+      estaTocando: !!this.state.tocando,
+      toggleInclusao: this.toggleInclusao,
+      pararAudio: this.pararAudio,
+      ouvirTudo: this.ouvirTudo,
+      ouvirIntro: this.ouvirIntro,
+      ouvir1: this.ouvir1, ouvir2: this.ouvir2, ouvir3: this.ouvir3, ouvir4: this.ouvir4,
+      ouvir5: this.ouvir5, ouvir6: this.ouvir6, ouvir7: this.ouvir7,
       on1: this.set("q1"), on2: this.set("q2"), on3: this.set("q3"), on4: this.set("q4"),
-      on5: this.set("q5"), on6: this.set("q6"), on7: this.set("q7")
+      on5: this.set("q5"), on6: this.set("q6"), on7: this.set("q7"),
     };
   }
 }
