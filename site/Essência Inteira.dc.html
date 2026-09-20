@@ -187,7 +187,14 @@
         <span style="font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:#6B3FA0">Vídeo da campanha</span>
         <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4.2vw,50px);line-height:1.1;max-width:22ch">Dois minutos para olhar com outros olhos</h2>
       </div>
-      <video src="uploads/WhatsApp Video 2026-09-16 at 15.14.10.mp4" controls="" playsInline="" preload="metadata" style="width:100%;max-height:70vh;display:block;background:#000;border-radius:2px;box-shadow:0 40px 90px -50px rgba(0,0,0,0.9)"></video>
+      <div style="position:relative;border-radius:2px;overflow:hidden;box-shadow:0 40px 90px -50px rgba(0,0,0,0.9);cursor:pointer" onclick="var v=this.querySelector('video'),b=this.querySelector('.play-overlay');if(v.paused){v.play();}else{v.pause();}">
+        <video src="uploads/WhatsApp Video 2026-09-16 at 15.14.10.mp4" controls playsinline preload="metadata" style="width:100%;max-height:70vh;display:block;background:#000" onplay="this.parentNode.querySelector('.play-overlay').style.opacity='0';this.parentNode.querySelector('.play-overlay').style.pointerEvents='none'" onpause="this.parentNode.querySelector('.play-overlay').style.opacity='1'"></video>
+        <div class="play-overlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;transition:opacity .25s;background:rgba(15,10,20,0.28)">
+          <span style="width:88px;height:88px;border-radius:50%;background:rgba(107,63,160,0.94);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(0,0,0,0.45)">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </div>
+      </div>
       <p style="margin:0;text-align:center;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:#5A4F6B">Compartilhe. Informação também protege.</p>
     </div>
   </section>
